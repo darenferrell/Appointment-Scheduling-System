@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="1202.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsContactsController">
+    <children>
+        <AnchorPane layoutX="1.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="1200.0">
+            <children>
+                <AnchorPane layoutX="50.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="1100.0">
+                    <children>
+                        <AnchorPane prefHeight="416.0" prefWidth="1104.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+                            <children>
+                                <HBox alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="26.0" prefWidth="1060.0" spacing="100.0">
+                                    <padding>
+                                        <Insets right="10.0" />
+                                    </padding>
+                                    <children>
+                                          <Label text="Contact" />
+                                          <ComboBox fx:id="contactsCombinationBox" onAction="#contactsCombinationBoxPressed" prefWidth="150.0" promptText="Select a Contact" />
+                                        <HBox alignment="CENTER" prefHeight="26.0" prefWidth="300.0" spacing="15.0" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER" layoutX="2.0" layoutY="360.0" prefHeight="48.0" prefWidth="1100.0" spacing="100.0">
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#generateCountriesReportAction" prefHeight="26.0" prefWidth="150.0" text="Country Report" />
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#generateMonthTypeReportAction" prefHeight="26.0" prefWidth="150.0" text="Month &amp; Type Report" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="contactReportsTableView" layoutX="22.0" layoutY="56.0" prefHeight="296.0" prefWidth="1060.0">
+                                    <columns>
+                                        <TableColumn fx:id="appointmentIDColumn" prefWidth="111.19998168945312" text="Appointment ID" />
+                                        <TableColumn fx:id="titleColumn" prefWidth="48.79998779296875" text="Title" />
+                                        <TableColumn fx:id="descriptionColumn" prefWidth="120.0" text="Description" />
+                                        <TableColumn fx:id="locationColumn" prefWidth="68.0" text="Location" />
+                                        <TableColumn fx:id="contactColumn" prefWidth="93.5999755859375" text="Contact" />
+                                        <TableColumn fx:id="typeColumn" prefWidth="68.0" text="Type" />
+                                        <TableColumn fx:id="startDateColumn" prefWidth="84.79998779296875" text="Start Date" />
+                                        <TableColumn fx:id="endDateColumn" prefWidth="83.2000732421875" text="End Date" />
+                                        <TableColumn fx:id="startTimeColumn" prefWidth="82.4000244140625" text="Start Time" />
+                                        <TableColumn fx:id="endTimeColumn" prefWidth="76.0001220703125" text="End Time" />
+                                        <TableColumn fx:id="customerIDColumn" prefWidth="115.20013427734375" text="Customer ID" />
+                                        <TableColumn fx:id="userIDColumn" prefWidth="112.7999267578125" text="User ID" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                        <Button layoutX="442.0" layoutY="429.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="26.0" prefWidth="150.0" text="Cancel" />
+                    </children>
+                </AnchorPane>
+                <HBox alignment="TOP_RIGHT" layoutX="259.0" layoutY="29.0" prefHeight="24.0" prefWidth="865.0" spacing="60.0">
+                    <children>
+                      <Label prefHeight="35.0" prefWidth="174.0" text="Contact Reports" textAlignment="CENTER">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </Label>
+                            <Label fx:id="totalAppointmentsLabel" prefHeight="26.0" prefWidth="200.0" text="Total Appointments: " />
+                        <Button contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="26.0" prefWidth="150.0" text="Logout" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

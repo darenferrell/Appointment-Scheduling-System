@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsMonthTypeController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="860.0">
+         <children>
+            <HBox alignment="TOP_RIGHT" layoutX="281.0" layoutY="29.0" prefHeight="26.0" prefWidth="540.0" spacing="60.0">
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+               <children>
+                  <Label prefHeight="27.0" prefWidth="461.0" text="Month and Type Reports">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="40.0" layoutY="82.0" prefHeight="362.0" prefWidth="781.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+               <children>
+                  <TableView fx:id="reportsMonthTypeTableview" layoutX="90.0" layoutY="14.0" prefHeight="290.0" prefWidth="600.0">
+                     <columns>
+                        <TableColumn fx:id="monthColumn" prefWidth="200.0" text="Month" />
+                        <TableColumn fx:id="typeColumn" prefWidth="200.0" text="Type" />
+                        <TableColumn fx:id="countColumn" prefWidth="200.0" text="Count" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" layoutY="350.0" prefHeight="26.0" prefWidth="780.0" spacing="100.0" />
+                  <Button layoutX="206.0" layoutY="328.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#generateContactsReportButtonPressed" prefHeight="26.0" prefWidth="131.0" text="Contact Report" />
+                  <Button layoutX="425.0" layoutY="328.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#generateCountriesReportButtonPressed" prefHeight="26.0" prefWidth="131.0" text="Country Report" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="244.0" layoutY="474.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#cancelButtonPressed" prefHeight="26.0" prefWidth="131.0" text="Cancel" />
+            <Button contentDisplay="RIGHT" layoutX="463.0" layoutY="474.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#logoutButtonPressed" prefHeight="26.0" prefWidth="131.0" text="Logout" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

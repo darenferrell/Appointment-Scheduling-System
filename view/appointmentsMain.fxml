@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="appointmentsMainScreen" prefHeight="653.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsMainController">
+   <children>
+      <Button fx:id="exitButton" layoutX="847.0" layoutY="576.0" mnemonicParsing="false" onAction="#exitButtonPressed" prefHeight="26.0" prefWidth="54.0" text="Exit" />
+      <Label fx:id="appointmentsMainTitle" layoutX="354.0" layoutY="37.0" text="Appointments">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="addAppointmentButton" layoutX="345.0" layoutY="575.0" mnemonicParsing="false" onAction="#addAppointmentButtonPressed" prefHeight="26.0" prefWidth="54.0" text="Add" />
+      <TableView fx:id="appointmentsMainTableView" layoutX="11.0" layoutY="181.0" prefHeight="268.0" prefWidth="934.0">
+        <columns>
+          <TableColumn fx:id="appointmentIDColumn" prefWidth="114.39999103546143" text="Appointment_ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="40.79998779296875" text="Title" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="120.00001525878906" text="Description" />
+            <TableColumn fx:id="locationColumn" prefWidth="64.0" text="Location" />
+            <TableColumn fx:id="contactIDColumn" prefWidth="66.39996337890625" text="Contact" />
+            <TableColumn fx:id="typeColumn" prefWidth="54.4000244140625" text="Type" />
+            <TableColumn fx:id="startDateColumn" prefWidth="76.79998779296875" text="Start Date" />
+            <TableColumn fx:id="endDateColumn" prefWidth="72.79998779296875" text="End Date" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="78.4000244140625" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="76.7999267578125" text="End Time" />
+            <TableColumn fx:id="customerIDColumn" prefWidth="89.60003662109375" text="Customer_ID" />
+            <TableColumn fx:id="userIDColumn" prefWidth="83.1998291015625" text="User_ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="modifyAppointmentButton" layoutX="436.0" layoutY="576.0" mnemonicParsing="false" onAction="#modifyAppointmentButtonPressed" prefHeight="26.0" prefWidth="73.0" text="Modify" />
+      <Button fx:id="customersButton" layoutX="53.0" layoutY="479.0" mnemonicParsing="false" onAction="#customersButtonPressed" prefHeight="26.0" prefWidth="122.0" text="Customers Screen" />
+      <Button fx:id="reportsButton" layoutX="53.0" layoutY="533.0" mnemonicParsing="false" onAction="#reportsButtonPressed" prefHeight="26.0" prefWidth="122.0" text="Reports Screen" />
+      <Button fx:id="deleteAppointmentButton" layoutX="543.0" layoutY="576.0" mnemonicParsing="false" onAction="#deleteAppointmentButtonPressed" prefHeight="26.0" prefWidth="73.0" text="Delete" />
+      <RadioButton fx:id="currentWeekRadioButton" layoutX="310.0" layoutY="131.0" mnemonicParsing="false" onAction="#currentWeekAppointmentsButtonSelected" text="Current Week">
+         <toggleGroup>
+            <ToggleGroup fx:id="Appointments" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="currentMonthRadioButton" layoutX="436.0" layoutY="131.0" mnemonicParsing="false" onAction="#currentMonthAppointmentsButtonSelected" text="Current Month" toggleGroup="$Appointments" />
+      <RadioButton fx:id="allAppointmentsRadioButton" layoutX="573.0" layoutY="132.0" mnemonicParsing="false" onAction="#allAppointmentsButtonSelected" selected="true" text="All Appointments" toggleGroup="$Appointments" />
+   </children>
+</AnchorPane>
