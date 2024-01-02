@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginScreen" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+         <children>
+            <Button fx:id="loginButton" layoutX="112.0" layoutY="321.0" mnemonicParsing="false" onAction="#loginButtonPressed" prefHeight="26.0" prefWidth="82.0" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <TextField fx:id="userNameTextField" layoutX="242.0" layoutY="158.0" prefHeight="26.0" prefWidth="190.0" />
+            <TextField fx:id="passwordTextField" layoutX="242.0" layoutY="209.0" prefHeight="26.0" prefWidth="190.0" />
+            <Label fx:id="passwordLabel" layoutX="170.0" layoutY="213.0" text="Password" />
+            <Label fx:id="userNameLabel" layoutX="168.0" layoutY="163.0" text="Username" />
+            <Label fx:id="loginRequestLabel" layoutX="128.0" layoutY="84.0" prefHeight="47.0" prefWidth="343.0" text="Please log in to schedule or modify an appointment.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="zoneIDLabel" layoutX="173.0" layoutY="267.0" text="Zone ID" />
+            <Button fx:id="exitButton" layoutX="422.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitButtonPressed" prefHeight="26.0" prefWidth="82.0" text="Exit">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="welcomeLabel" layoutX="65.0" layoutY="39.0" prefHeight="38.0" prefWidth="469.0" text="Welcome to the Appointment Scheduler!">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+      <Button fx:id="resetButton" layoutX="259.0" layoutY="321.0" mnemonicParsing="false" onAction="#resetButtonPressed" prefHeight="30.0" prefWidth="82.0" text="Reset" />
+         </children>
+      </AnchorPane>
